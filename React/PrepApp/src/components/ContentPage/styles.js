@@ -1,0 +1,88 @@
+export const Title = {
+  alignSelf: 'flex-start',
+  fontFamily: 'Roboto',
+  fontSize: '18px',
+  letterSpacing: 0,
+  color: '#78909C',
+  opacity: 1,
+};
+
+export const classes = {
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    // width: '950px',
+    // minWidth: 'auto',
+    // maxWidth: '100%',
+  },
+  tituloDesafio: {
+    width: 308,
+    height: 50,
+    paddingLeft: 5,
+    marginBottom: 5,
+    background: '0% 0% no-repeat padding-box',
+    border: 'solid 1px #78909C',
+    borderRadius: 5,
+    opacity: 1,
+  },
+  contadorCaracteres: {
+    width: 308,
+    fontFamily: 'Roboto',
+    fontSize: '12px',
+    letterSpacing: 0,
+    color: '#78909C',
+    opacity: 1,
+  },
+  contadorCaracteresEditor: {
+    width: '100%',
+    fontFamily: 'Roboto',
+    fontSize: '12px',
+    letterSpacing: 0,
+    color: '#78909C',
+    opacity: 1,
+    paddingRight: 5,
+    textAlign: 'end',
+  },
+  containerEditor: {
+    marginTop: 10,
+  },
+  containerEditorCabecalho: {
+    display: 'flex',
+    flexDirection: 'row',
+    width: '100%',
+    flexGrow: 1,
+    justifyContent: 'space-between',
+    paddingBottom: '15px',
+  },
+  containerEditorCabecalhoNumPag: {
+    fontFamily: 'Roboto',
+    fontSize: '14px',
+    letterSpacing: 0,
+    color: '#78909C',
+    opacity: 1,
+  },
+  containerEditorCabecalhoAddHTML: {
+    fontFamily: 'Roboto',
+    fontSize: '14px',
+    letterSpacing: 0,
+    color: '#3796F6',
+    opacity: 1,
+  },
+  containerEditorCabecalhoX: {
+    color: '#78909C',
+  },
+  containerDivButtoms: {
+    display: 'flex',
+    flexDirection: 'row',
+    width: '100%',
+    flexGrow: 1,
+    justifyContent: 'center',
+    marginTop: 20,
+  },
+  btnAddPagina_VizualizarPrevia: {
+    backgroundColor: '#FFFFFF',
+    color: '#3796F6',
+    boxShadow: 'none',
+  },
+  editor: {},
+};

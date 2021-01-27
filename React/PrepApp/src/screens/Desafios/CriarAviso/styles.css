@@ -1,0 +1,17 @@
+.MuiTab-textColorPrimary {
+  color: #3796f6;
+}
+
+MuiTabs-root {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  width: 100%;
+}
+
+MuiTabs-flexContainer {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: space-between;
+}

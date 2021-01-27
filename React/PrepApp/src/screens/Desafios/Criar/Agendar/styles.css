@@ -1,0 +1,34 @@
+.fc-button-primary {
+  /* color: #8c5d90 !important; */
+  color: #2c3e50 !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+.fc .table .fc-body {
+  border: none !important;
+}
+.calendar-style {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.calendar-top {
+  margin: 0 0 3em;
+}
+
+.calendar {
+  margin: 0 auto;
+  max-width: 95%;
+  max-height: 75%;
+  color: #3796f6;
+}
+
+.containerDivButtoms {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-grow: 1;
+  justify-content: center;
+  margin-top: 20px;
+}
