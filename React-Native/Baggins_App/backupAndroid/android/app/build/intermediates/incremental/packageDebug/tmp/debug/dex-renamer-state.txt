@@ -1,0 +1,4 @@
+#Sun Jun 21 14:03:52 BRT 2020
+base.0=/Users/06587465960/Documents/Baggins_App/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex
