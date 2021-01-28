@@ -69,6 +69,17 @@ class _MyHomePageState extends State<MyHomePage> {
     futureAlbum = fetchAlbum();
   }
 
+  void recarregar() async {
+    var p = await client.getPhoto();
+
+    setState(() {
+      link = p.get(pexels.ImageFormats.portrait);
+      stdout.write(link);
+    });
+
+    debugPrint('Recarregar => $link');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -79,14 +90,31 @@ class _MyHomePageState extends State<MyHomePage> {
             if (snapshot.hasData) {
               return new Scaffold(
                 body: Container(
-                  height: double.infinity,
-                  width: double.infinity,
-                  child: new Image.network(
-                    link,
-                    fit: BoxFit.cover,
-                    alignment: Alignment.center,
-                  ),
-                ),
+                    height: double.infinity,
+                    width: double.infinity,
+                    child: new Image.network(
+                      link,
+                      fit: BoxFit.cover,
+                      alignment: Alignment.center,
+                    )),
+                floatingActionButton: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    FloatingActionButton(
+                      onPressed: recarregar,
+                      tooltip: 'Carregar outra imagem',
+                      child: Icon(Icons.cached),
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    // FloatingActionButton(
+                    //   // onPressed: _decrementCounter,
+                    //   // tooltip: 'Diminuir',
+                    //   child: Icon(Icons.remove),
+                    // ),
+                  ],
+                ), // This trailing comma makes a,
               );
             } else if (snapshot.hasError) {
               return Text("${snapshot.error}");
