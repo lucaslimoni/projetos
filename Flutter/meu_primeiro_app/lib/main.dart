@@ -51,20 +51,19 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   ];
 
   metodoSwitch(key) {
-    debugPrint('Key: $key');
     switch (key) {
       case 0:
-        debugPrint('titulo: $titulo');
         titulo = 'Contador';
         return home.MyHomePage(title: titulo);
         break;
       case 1:
-        debugPrint('titulo: $titulo');
         titulo = 'Buscador Imagens';
         return search.MyHomePage(title: titulo);
         break;
       default:
+        titulo = 'Tab $key';
         return _widgetOptions.elementAt(key);
+        break;
     }
   }
 

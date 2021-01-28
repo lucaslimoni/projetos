@@ -71,13 +71,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void recarregar() async {
     var p = await client.getPhoto();
-
     setState(() {
       link = p.get(pexels.ImageFormats.portrait);
       stdout.write(link);
     });
-
-    debugPrint('Recarregar => $link');
   }
 
   @override
