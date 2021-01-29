@@ -45,7 +45,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       style: optionStyle,
     ),
     Text(
-      'Index 2: School',
+      'Index 2: Perfil',
       style: optionStyle,
     ),
   ];
@@ -61,7 +61,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         return search.MyHomePage(title: titulo);
         break;
       default:
-        titulo = 'Tab $key';
+        titulo = 'Perfil';
         return _widgetOptions.elementAt(key);
         break;
     }
@@ -95,8 +95,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             title: Text('Search Images'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            title: Text('School'),
+            icon: Icon(Icons.account_circle),
+            title: Text('Perfil'),
           ),
         ],
         currentIndex: _selectedIndex,
