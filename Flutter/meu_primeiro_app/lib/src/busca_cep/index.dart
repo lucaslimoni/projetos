@@ -1,6 +1,6 @@
 import 'dart:async';
-import 'dart:convert';
-import "dart:io";
+// import 'dart:convert';
+// import "dart:io";
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -72,21 +72,10 @@ class _BuscaCep extends State<BuscaCep> {
     var CEP = new via_cep();
 
     var result = await CEP.searchCEP('$cep', 'json', '');
+    _searching(true);
 
     // Sucesso
     if (CEP.getResponse() == 200) {
-      _searching(true);
-
-      debugPrint('CEP: ' + CEP.getCEP());
-      debugPrint('Logradouro: ' + CEP.getLogradouro());
-      debugPrint('Complemento: ' + CEP.getComplemento());
-      debugPrint('Bairro: ' + CEP.getBairro());
-      debugPrint('Localidade: ' + CEP.getLocalidade());
-      debugPrint('UF: ' + CEP.getUF());
-      // debugPrint('Unidade: ' + CEP.getUnidade());
-      debugPrint('IBGE ' + CEP.getIBGE());
-      debugPrint('GIA: ' + CEP.getGIA());
-
       setState(() {
         _result = CEP.getBody();
       });
@@ -95,6 +84,7 @@ class _BuscaCep extends State<BuscaCep> {
     } else {
       debugPrint('Código de Retorno: ' + CEP.getResponse().toString());
       debugPrint('Erro: ' + CEP.getBody());
+      _searching(false);
     }
   }
 
