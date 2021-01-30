@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'src/home/index.dart' as home;
 import 'src/image_search/index.dart' as search;
+import 'src/busca_cep/index.dart' as viaCep;
 
 String titulo = 'Contador';
 void main() {
@@ -61,8 +62,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         return search.MyHomePage(title: titulo);
         break;
       default:
-        titulo = 'Perfil';
-        return _widgetOptions.elementAt(key);
+        titulo = 'CEP';
+        return viaCep.BuscaCep(title: titulo);
         break;
     }
   }
@@ -95,8 +96,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             title: Text('Search Images'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle),
-            title: Text('Perfil'),
+            icon: Icon(Icons.house_outlined),
+            title: Text('CEP'),
           ),
         ],
         currentIndex: _selectedIndex,

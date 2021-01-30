@@ -21,6 +21,7 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  via_cep: ^1.0.6
   http: ^0.12.2
   pexels: ^0.1.1
   flutter:
