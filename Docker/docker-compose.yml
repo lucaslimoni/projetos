@@ -1,0 +1,18 @@
+version: "3"
+services:
+  # Web service layer
+  db:
+    image: mcr.microsoft.com/mssql/server
+    container_name: jenova
+    environment:
+      SA_PASSWORD: "A123456_"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    networks:
+      - app-network
+
+#Docker Networks
+networks:
+  app-network:
+    driver: bridge
